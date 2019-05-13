@@ -1,38 +1,36 @@
-{{!-- <h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-    {{#each cats}}
-    {{#unless sleepy}}
-    {{> cats/cat-block sleep=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-    {{#each cats}}
-    {{#if sleepy}}
-    {{> cats/cat-block sleep=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Cat Name:</label>
-        <input type="text" id="ca" name="name">
+<div>
+    <h1>Eat-Da-Burger</h1>
+    <h2>devoured</h2>
+    {{#each burger}}
+    <div>
+        {{#if devoured}}
+        <p>{{this.burger_name}}</p>
+        {{/if}}
     </div>
+    {{/each}}
 
-    <div class="form-group">
-        <label for="slee">Sleepy?</label><br>
-        <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-        <input type="radio" name="sleepy" value="0"> Awake
+    <hr>
+    <h2>Not eaten</h2>
+    {{#each burger}}
+    <div>
+        {{#unless devoured}}
+        <p>{{this.burger_name}}</p>
+        <a class="waves-effect waves-light btn devour-button">Devour</a>
+        <br><br>
+        <hr>
+        {{/unless}}
     </div>
-
-    <button type="submit">Add Cat</button>
-</form> --}}
+    {{/each}}
+    <hr>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Enter the Burger you want to eat..." id="user-burger" type="text"
+                        class="validate">
+                </div>
+            </div>
+        </form>
+        <button class="btn waves-effect waves-light" type="submit" name="action" id="submit-button">Create Burger
+            <i class="material-icons right">send</i>
+        </button>
