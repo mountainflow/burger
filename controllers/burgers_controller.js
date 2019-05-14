@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+// This is coming from -- connection>orm>burger_model==============
 const burger = require('../models/burgerModel.js');
 
 router.get("/", function (req, res) {
@@ -21,4 +22,5 @@ router.post("/api/burger", function (req, res) {
     })
 })
 
+// Exports to server.js============================================
 module.exports = router;

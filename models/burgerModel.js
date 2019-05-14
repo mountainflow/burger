@@ -1,3 +1,4 @@
+// This is coming from -- connection>orm===========================
 const orm = require('../config/orm.js');
 
 var burger = {
@@ -9,5 +10,5 @@ var burger = {
     }
 };
 
-
+// Exports to burgers_controller.js ===============================
 module.exports = burger;

@@ -14,7 +14,10 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
+// This is coming from -- =========================================
+// -- connection>orm>burger_model>burger_controller ===============
 const routes = require("./controllers/burgers_controller.js");
+
 app.use(routes);
 
 app.listen(PORT, function () {
