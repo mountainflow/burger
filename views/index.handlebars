@@ -5,6 +5,9 @@
     <div>
         {{#if devoured}}
         <p>{{this.burger_name}}</p>
+        <a data-id="{{this.id}}" class="waves-effect waves-light btn delete-button">Delete</a>
+        <br><br>
+        <hr>
         {{/if}}
     </div>
     {{/each}}
@@ -15,7 +18,7 @@
     <div>
         {{#unless devoured}}
         <p>{{this.burger_name}}</p>
-        <a class="waves-effect waves-light btn devour-button">Devour</a>
+        <a data-id="{{this.id}}" class="waves-effect waves-light btn devour-button">Devour</a>
         <br><br>
         <hr>
         {{/unless}}

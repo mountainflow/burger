@@ -7,6 +7,12 @@ var burger = {
     },
     postBurger: function (frntData, cb) {
         orm.insertOne('burgers', 'burger_name', frntData, cb);
+    },
+    putBurger: function (id, cb) {
+        orm.update('burgers', id, cb);
+    },
+    deleteBurger: function () {
+        orm.delete('burgers', );
     }
 };
 
