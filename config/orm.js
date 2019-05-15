@@ -22,9 +22,9 @@ let orm = {
             cb(result);
         });
     },
-    delete: function () {
-        var queryString = "UPDATE ?? (??) VALUES (?)";
-        connection.query(queryString, [table, col, frntData.burger_name], function (err, result) {
+    delete: function (table, id, cb) {
+        var queryString = "DELETE FROM ?? WHERE id = ?";
+        connection.query(queryString, [table, id], function (err, result) {
             if (err) throw err;
             cb(result);
         });

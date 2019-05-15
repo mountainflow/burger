@@ -11,8 +11,8 @@ var burger = {
     putBurger: function (id, cb) {
         orm.update('burgers', id, cb);
     },
-    deleteBurger: function () {
-        orm.delete('burgers', );
+    deleteBurger: function (id, cb) {
+        orm.delete('burgers', id, cb);
     }
 };
 

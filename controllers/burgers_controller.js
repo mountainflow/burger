@@ -26,13 +26,15 @@ router.put("/api/burger/:id", function (req, res) {
     console.log(req.params + ' this is req.params');
     let id = req.params.id;
     burgerModel.putBurger(id, function (data) {
-        res.end();
+        res.send();
     })
 });
 
 router.delete("/api/burger/:id", function (req, res) {
-
-    res.end();
+    let id = req.params.id;
+    burgerModel.deleteBurger(id, function (data) {
+        res.send();
+    })
 });
 
 // Exports to server.js============================================
